@@ -57,6 +57,20 @@
         </div>
     </li>
 
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item {{Str::contains(Request::fullUrl(), 'transactions') ? 'active' : ''}}">
+        <a class="nav-link collapsed" data-toggle="collapse" href="#Transaksi" role="button"
+        aria-expanded="false" aria-controls="multiCollapseExample1">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Transaksi</span>
+        </a>
+        <div id="Transaksi" class="collapse multi-collapse" >
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Transaksi</h6>
+                <a class="collapse-item" href="{{route('admin.transactions.index')}}">List Semua Transaksi</a>
+            </div>
+        </div>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

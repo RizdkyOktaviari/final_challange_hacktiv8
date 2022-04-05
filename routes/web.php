@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\ProdukController;
-
+use App\Http\Controllers\TransaksiController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,3 +36,6 @@ Route::get('/produk-edit/{id}', [App\Http\Controllers\ProdukController::class, '
 Route::post('/produk-store', [App\Http\Controllers\ProdukController::class, 'store'])->name('produk_store');
 Route::post('/produk-update/{id}', [App\Http\Controllers\ProdukController::class, 'update'])->name('produk_update');
 Route::get('/produk-delete/{id}', [App\Http\Controllers\ProdukController::class, 'delete'])->name('produk_delete');
+//order
+Route::get('/admin/transactions', [App\Http\Controllers\TransactionController::class, 'index'])->name('admin.transactions.index');
+Route::post('/admin/transactions/export', [App\Http\Controllers\TransactionController::class, 'export'])->name('admin.transactions.export');
